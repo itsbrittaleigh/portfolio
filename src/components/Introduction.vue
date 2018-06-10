@@ -1,5 +1,10 @@
 <template>
-  <section class="introduction full-height-section">
+  <section
+    :class="{
+      'introduction full-height-section': true,
+      'nav-is-active': navIsActive,
+    }"
+    >
     <div class="wrapper">
       <header>
         <img src="../assets/images/signature.png" alt="Britta Leigh Rodenbeck">
@@ -7,7 +12,7 @@
       <p class="title">Web Developer</p>
       <p class="locations">Detroit, MI <span class="bullet">&bull;</span> Rockford, IL</p>
     </div>
-    <div id="navigation-menu-button" class="burger-container">
+    <div class="burger-container" @click="toggleBurger">
       <div class="mmm-burgers">
         <span></span>
         <span></span>
@@ -17,9 +22,15 @@
     </div>
     <nav id="navigation-menu">
       <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="#" v-scroll-to="'#about'">About Me</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#portfolio'">Portfolio</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#contact'">Contact</a>
+        </li>
       </ul>
     </nav>
   </section>
@@ -29,7 +40,14 @@
 export default {
   name: 'Introduction',
   data() {
-    return {};
+    return {
+      navIsActive: false,
+    };
+  },
+  methods: {
+    toggleBurger() {
+      this.navIsActive = !this.navIsActive;
+    },
   },
 };
 </script>
