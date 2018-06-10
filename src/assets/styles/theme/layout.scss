@@ -1,0 +1,35 @@
+body,
+html {
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@mixin wrapper-width($character) {
+  @media only screen and (min-width: $character) {
+    .wrapper {
+      width: $character - 30px;
+    }
+  }
+}
+
+@include wrapper-width($bran);
+@include wrapper-width($arya);
+@include wrapper-width($sansa);
+@include wrapper-width($jon);
+
+.full-height-section {
+  min-height: 100vh;
+  padding: 30px 0 0;
+}
