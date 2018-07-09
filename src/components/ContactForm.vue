@@ -84,7 +84,7 @@ export default {
       return {
         name: this.name,
         email: this.email,
-        phone: this.phone,
+        phone: this.animal,
         message: this.message,
       };
     },
