@@ -1,56 +1,58 @@
 <template>
   <form method="post" @submit.prevent="handleSubmit">
     <p v-if="wasSuccessful">Thank you! I'll be in touch shortly.</p>
-    <p class="hidden">
-      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-    </p>
-    <div class="col-rt">
-      <div class="field">
-        <label
-          for="name"
-          :class="{'label': true, lift: liftName }"
-        >
-          Full name
-        </label>
-        <input inputmode="text" name="name" class="input" id="name" v-model="name">
+    <template v-else>
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+      <div class="col-rt">
+        <div class="field">
+          <label
+            for="name"
+            :class="{'label': true, lift: liftName }"
+          >
+            Full name
+          </label>
+          <input inputmode="text" name="name" class="input" id="name" v-model="name">
+        </div>
+        <div class="field">
+          <label
+            for="email"
+            :class="{'label': true, lift: liftEmail }"
+          >
+            E-mail address
+          </label>
+          <input inputmode="email" name="email" class="input" id="email" v-model="email">
+        </div>
+        <div class="field">
+          <label
+            for="animal"
+            :class="{'label': true, lift: liftAnimal }"
+          >
+            Favorite animal
+          </label>
+          <input inputmode="text" name="animal" class="input" id="animal" v-model="animal">
+        </div>
       </div>
-      <div class="field">
-        <label
-          for="email"
-          :class="{'label': true, lift: liftEmail }"
-        >
-          E-mail address
-        </label>
-        <input inputmode="email" name="email" class="input" id="email" v-model="email">
+      <div class="col-lt">
+        <div class="field">
+          <label
+            for="message"
+            :class="{'label': true, lift: liftMessage }"
+          >
+            What can I help you with?
+          </label>
+          <textarea name="message" class="input" id="message" v-model="message"></textarea>
+        </div>
       </div>
-      <div class="field">
-        <label
-          for="animal"
-          :class="{'label': true, lift: liftAnimal }"
+      <div class="button-container">
+        <img
+          src="../assets/images/img-postmark.png"
+          alt="Postmark illustration Detroit MI Rockford IL 2018"
         >
-          Favorite animal
-        </label>
-        <input inputmode="text" name="animal" class="input" id="animal" v-model="animal">
+        <button type="submit">Send</button>
       </div>
-    </div>
-    <div class="col-lt">
-      <div class="field">
-        <label
-          for="message"
-          :class="{'label': true, lift: liftMessage }"
-        >
-          What can I help you with?
-        </label>
-        <textarea name="message" class="input" id="message" v-model="message"></textarea>
-      </div>
-    </div>
-    <div class="button-container">
-      <img
-        src="../assets/images/img-postmark.png"
-        alt="Postmark illustration Detroit MI Rockford IL 2018"
-      >
-      <button type="submit">Send</button>
-    </div>
+    </template>
   </form>
 </template>
 
@@ -115,6 +117,11 @@ export default {
   visibility: hidden;
 }
 form {
+  > p {
+    width: 100%;
+    text-align: right;
+    padding-right: 40px;
+  }
   .field {
     position: relative;
     margin-bottom: 15px;
@@ -193,6 +200,7 @@ form {
   }
   @media only screen and (min-width: $arya) {
     background: url(../assets/images/bg-postcard.png) no-repeat center center;
+    min-height: 550px;
     background-size: 100% auto;
     display: flex;
     justify-content: space-between;
