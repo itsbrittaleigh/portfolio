@@ -1,9 +1,12 @@
 import Vue from 'vue';
 import VueScrollTo from 'vue-scrollto';
-import App from './App.vue';
+import InViewportDirective from 'vue-in-viewport-directive';
 import store from './store';
+import App from './App.vue';
 
 Vue.use(VueScrollTo);
+
+Vue.directive('in-viewport', InViewportDirective);
 
 Vue.config.productionTip = false;
 

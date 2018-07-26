@@ -1,0 +1,13 @@
+.footer {
+  margin-top: 70px;
+  background: $teal-darker;
+  padding: 10px 20px;
+}
+
+.footer__text {
+  color: $teal-lighter;
+  font-family: $font;
+  text-transform: lowercase;
+  line-height: normal;
+  text-align: center;
+}

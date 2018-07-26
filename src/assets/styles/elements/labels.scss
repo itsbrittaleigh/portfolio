@@ -1,0 +1,12 @@
+label {
+  position: absolute;
+  top: -13px;
+  left: 10px;
+  height: 26px;
+  padding: 5px 10px;
+  color: $teal-dark;
+  background: $teal-lighter;
+  font-size: 12px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), 0 100%);
+  font-family: $font;
+}

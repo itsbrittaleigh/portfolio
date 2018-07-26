@@ -1,0 +1,8 @@
+.wrapper {
+  width: calc(100vw - 40px);
+  margin: 0 auto;
+  @media only screen and (min-width: $arya) {
+    width: calc(100vw - 80px);
+    max-width: 940px;
+  }
+}

@@ -1,0 +1,42 @@
+.headline {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  &:before {
+    content: '';
+    height: 44px;
+    width: 0;
+    position: absolute;
+    left: -20px;
+    top: 24px;
+    background: $teal-lighter;
+    z-index: -1;
+    transition: ease-in-out 0.8s;
+  }
+  &.in-viewport {
+    &:before {
+      width: calc(100% + 10px);
+    }
+  }
+  @media only screen and (min-width: $arya) {
+    &:before {
+      left: -40px;
+    }
+    &.in-viewport {
+      &:before {
+        width: calc(100% + 20px);
+      }
+    }
+  }
+  @media only screen and (min-width: 980px) {
+    &:before {
+      left: calc(((100vw - 940px) / 2) * -1);
+      transition: 1.2s;
+    }
+    &.in-viewport {
+      &:before {
+        width: calc(100% + ((100vw - 940px) / 2) - 20px);
+      }
+    }
+  }
+}

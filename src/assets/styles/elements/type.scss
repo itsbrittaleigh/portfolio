@@ -1,0 +1,49 @@
+h1 {
+  font-family: $font;
+  color: $white;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: normal;
+  margin: 0;
+  @media only screen and (min-width: $arya) {
+    font-size: 36px;
+  }
+}
+
+h2 {
+  font-family: $font;
+  color: $teal-darker;
+  font-size: 36px;
+  line-height: 1.33;
+  font-weight: normal;
+  @media only screen and (min-width: $arya) {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-family: $font;
+  color: $teal-darker;
+  font-size: 20px;
+  line-height: 1.33;
+  font-weight: bold;
+  @media only screen and (min-width: $arya) {
+    font-size: 24px;
+  }
+}
+
+p {
+  font-family: $font;
+  color: $teal-dark;
+  font-size: 16px;
+  line-height: 1.625;
+}
+
+a {
+  color: $red;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
