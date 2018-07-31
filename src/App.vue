@@ -19,10 +19,13 @@
             user experience while creatively solving problems.
           </p>
           <div class="icon__container">
-            <img src="./assets/images/about-straight-bangs.svg" alt="" class="icon__image">
+            <img src="./assets/images/about-straight-bangs.svg" alt="" class="icon__image hidden" v-in-viewport.once>
           </div>
           <h2 class="headline hidden" v-in-viewport.once>My Work</h2>
           <p class="hidden" v-in-viewport.once>Coming soon.</p>
+          <div class="icon__container">
+            <img src="./assets/images/portfolio.svg" alt="" class="icon__image hidden" v-in-viewport.once>
+          </div>
           <h2 class="headline hidden" v-in-viewport.once>Contact Me</h2>
         </div>
         <section class="hero-section hero-section--form">
@@ -36,7 +39,7 @@
         </section>
         <div class="wrapper">
           <div class="icon__container">
-            <img src="./assets/images/contact.svg" alt="" class="icon__image">
+            <img src="./assets/images/contact.svg" alt="" class="icon__image hidden" v-in-viewport.once>
           </div>
         </div>
       </div>

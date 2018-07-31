@@ -1,15 +1,16 @@
 <template>
-  <form method="post" @submit.prevent="handleSubmit">
+  <form method="post" @submit.prevent="checkForm">
     <input type="hidden" name="form-name" value="contact">
     <p
       v-for="(error, index) in errors"
       :key="index"
+      class="is-marginless color-white text-center bg-red p-b-5"
     >
       {{ error }}
     </p>
     <p
       v-if="wasSuccessful"
-      class="center"
+      class="text-center color-white"
     >
       I have received your message and will be responding soon.
     </p>
@@ -17,13 +18,15 @@
       <p class="hidden">
         <label>Don’t fill this out: <input name="bot-field"></label>
       </p>
-      <div class="field">
-        <label for="name">Name</label>
-        <input type="text" v-model="name">
-      </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input type="email" v-model="email">
+      <div class="flex-container--desktop flex-between">
+        <div class="field m-r-20">
+          <label for="name">Name</label>
+          <input type="text" v-model="name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" v-model="email">
+        </div>
       </div>
       <div class="field">
         <label for="message">Message</label>
@@ -58,6 +61,15 @@ export default {
     },
   },
   methods: {
+    checkForm() {
+      this.errors = [];
+      if (!this.name) this.errors.push('Your name is required.');
+      if (!this.email) this.errors.push('You must provide your email.');
+      else if (!validateEmail(this.email)) this.errors.push('You must provide a valid email address');
+      if (!this.message) this.errors.push('You must write a message.');
+      if(this.errors.length === 0) this.handleSubmit();
+      else e.preventDefault();
+    },
     encode(data) {
       return Object.keys(data)
         .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
