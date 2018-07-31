@@ -65,7 +65,7 @@ export default {
       this.errors = [];
       if (!this.name) this.errors.push('Your name is required.');
       if (!this.email) this.errors.push('You must provide your email.');
-      else if (!validateEmail(this.email)) this.errors.push('You must provide a valid email address');
+      else if (!this.validateEmail(this.email)) this.errors.push('You must provide a valid email address');
       if (!this.message) this.errors.push('You must write a message.');
       if(this.errors.length === 0) this.handleSubmit();
       else e.preventDefault();
