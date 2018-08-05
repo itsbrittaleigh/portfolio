@@ -4,15 +4,20 @@
     <p
       v-for="(error, index) in errors"
       :key="index"
-      class="is-marginless color-white text-center bg-red p-b-5"
+      :class="{
+        'is-marginless color-white text-center p-b-5': true,
+        'm-b-40': index === errors.length - 1,
+      }"
     >
+      <span class="color-red weight-bold">!&nbsp;</span>
       {{ error }}
+      <span class="color-red weight-bold">!&nbsp;</span>
     </p>
     <p
       v-if="wasSuccessful"
       class="text-center color-white"
     >
-      I have received your message and will be responding soon.
+      Thank you! I have received your message and will be responding soon.
     </p>
     <template v-else class="fields">
       <p class="hidden">

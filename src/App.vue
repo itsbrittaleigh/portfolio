@@ -11,15 +11,19 @@
       </section>
       <div class="main-content">
         <div class="wrapper">
-          <h2 class="headline hidden" v-in-viewport.once>About Me</h2>
-          <p class="hidden" v-in-viewport.once>
-            I am a front-end developer because I wanted to work every day in a capacity that allowed me to
-            solve problems by using my creativity. I am passionate about building engaging, thoughtful,
-            clean, and aesthetically pleasing user interfaces with an emphasis on practical and ethical
-            user experience while creatively solving problems.
-          </p>
-          <div class="icon__container">
-            <img src="./assets/images/about-straight-bangs.svg" alt="" class="icon__image hidden" v-in-viewport.once>
+          <div class="flex-container--desktop flex-between align-end">
+            <div class="content">
+              <h2 class="headline hidden" v-in-viewport.once>About Me</h2>
+              <p class="hidden" v-in-viewport.once>
+                I am a front-end developer because I wanted to work every day in a capacity that allowed me to
+                solve problems by using my creativity. I am passionate about building engaging, thoughtful,
+                clean, and aesthetically pleasing user interfaces with an emphasis on practical and ethical
+                user experience while creatively solving problems.
+              </p>
+            </div>
+            <div class="icon__container m-l-50">
+              <img src="./assets/images/about-straight-bangs.svg" alt="" class="icon__image hidden" v-in-viewport.once>
+            </div>
           </div>
           <h2 class="headline hidden" v-in-viewport.once>My Work</h2>
           <p class="hidden" v-in-viewport.once>Coming soon.</p>

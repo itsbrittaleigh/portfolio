@@ -18,6 +18,10 @@
   flex-wrap: wrap;
 }
 
+.align-end {
+  align-items: flex-end;
+}
+
 .flex-container--desktop {
   @media only screen and (min-width: $arya) {
     display: flex;
