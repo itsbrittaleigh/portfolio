@@ -67,7 +67,13 @@
           </div>
         </div>
       </section>
-      <a href="/portfolio">View all projects</a>
+      <router-link
+        :to="{
+          name: 'portfolio'
+        }"
+      >
+        View all projects
+      </router-link>
       <div class="icon__container">
         <img
           src="../assets/images/portfolio.svg"
