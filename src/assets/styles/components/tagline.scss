@@ -29,13 +29,26 @@
     }
   }
 }
-
 .tagline--bottom {
   position: absolute;
   bottom: 60px;
+}
+.tagline--right {
+  position: absolute;
   right: -100%;
   transition: 0.8s;
   &.in-viewport {
     right: 0;
+  }
+}
+.tagline--project {
+  width: auto;
+  height: auto;
+  padding: 21px 10px 8px 40px;
+  font-size: 36px;
+  &:after {
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 35px solid $teal-lighter;
   }
 }

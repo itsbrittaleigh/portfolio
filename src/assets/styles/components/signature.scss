@@ -1,16 +1,17 @@
 .signature {
   display: block;
-  width: 100%;
-  height: auto;
   max-width: 688px;
+  max-height: 400px;
   margin: 0 auto;
   opacity: 0;
   transition: 1.2s;
   &.in-viewport {
     opacity: 0.5;
   }
+  @media only screen and (min-width: $arya) {
+    max-height: 600px;
+  }
 }
-
 .signature--home {
   padding-top: 100px;
 }

@@ -1,11 +1,8 @@
-$teal-darker: #3E4E50;
+$teal-darker: #3e4e50;
 $teal-dark: #305252;
 $teal: #488286;
-$teal-light: #708E92;
+$teal-light: #708e92;
 $teal-lighter: #aff2e7;
-
-$red: #D33F49;
-
+$red: #d33f49;
 $white: #ffffff;
-
-$teal-gradient: linear-gradient(315deg, #488286 0%, #305252 100%);
+$teal-gradient: linear-gradient(315deg, #{$teal} 0%, #{$teal-dark} 100%);

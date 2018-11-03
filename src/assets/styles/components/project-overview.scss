@@ -1,0 +1,17 @@
+.project-overview {
+  @media only screen and (min-width: $arya) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.project-overview__item {
+  @media only screen and (min-width: $arya) {
+    width: calc(50% - 10px);
+  }
+}
+.project-overview__item--full {
+  @media only screen and (min-width: $arya) {
+    width: 100%;
+  }
+}

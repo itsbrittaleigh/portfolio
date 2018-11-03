@@ -1,0 +1,48 @@
+.button {
+  position: relative;
+  border: none;
+  outline: none;
+  height: 45px;
+  width: 275px;
+  padding: 0 10px 5px;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-transform: lowercase;
+  background: $red;
+  color: $white;
+  font-family: $font;
+  font-size: 24px;
+  font-weight: normal;
+  text-decoration: none;
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid $teal-lighter;
+    position: absolute;
+    left: -7px;
+    top: 9px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+.button--arrow-right {
+  justify-content: flex-start;
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid $teal-lighter;
+    border-left: none;
+    position: absolute;
+    left: auto;
+    right: -7px;
+    top: 9px;
+  }
+}

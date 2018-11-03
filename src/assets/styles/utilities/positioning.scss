@@ -1,27 +1,21 @@
 .flex-container {
   display: flex;
 }
-
 .flex-right {
   justify-content: flex-end;
 }
-
 .flex-center {
   justify-content: center;
 }
-
 .flex-between {
   justify-content: space-between;
 }
-
 .flex-wrap {
   flex-wrap: wrap;
 }
-
 .align-end {
   align-items: flex-end;
 }
-
 .flex-container--desktop {
   @media only screen and (min-width: $arya) {
     display: flex;

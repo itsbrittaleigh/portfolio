@@ -6,7 +6,6 @@
     visibility: visible;
   }
 }
-
 .hidden-on-desktop {
   @media only screen and (min-width: $arya) {
     display: none;

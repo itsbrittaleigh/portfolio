@@ -1,20 +1,19 @@
 @import 'settings/breakpoints';
 @import 'settings/colors';
 @import 'settings/typography';
-
 @import 'generic/normalize';
 @import 'generic/box-sizing';
-
 @import 'elements/body';
 @import 'elements/button';
 @import 'elements/inputs';
 @import 'elements/labels';
+@import 'elements/links';
+@import 'elements/lists';
 @import 'elements/type';
-
 @import 'objects/content';
 @import 'objects/footer-stick';
 @import 'objects/wrapper';
-
+@import 'components/button';
 @import 'components/contact-form';
 @import 'components/fade-in';
 @import 'components/field';
@@ -22,9 +21,10 @@
 @import 'components/headline';
 @import 'components/hero-section';
 @import 'components/icon';
+@import 'components/project';
+@import 'components/project-overview';
 @import 'components/signature';
 @import 'components/tagline';
-
 @import 'utilities/colors';
 @import 'utilities/positioning';
 @import 'utilities/spacing';

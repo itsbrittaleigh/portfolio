@@ -8,6 +8,7 @@ module.exports = {
     'at-rule-no-unknown': [true, {
       'ignoreAtRules': ['function', 'if', 'each', 'include', 'mixin', 'error', 'return', 'else'],
     }],
+    'at-rule-empty-line-before': 'never',
     'color-hex-case': 'lower',
     'color-hex-length': 'long',
     'color-named': 'never',

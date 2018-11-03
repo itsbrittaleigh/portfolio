@@ -40,3 +40,8 @@
     }
   }
 }
+.headline--no-background {
+  &:before {
+    background: none;
+  }
+}
