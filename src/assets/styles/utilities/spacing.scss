@@ -4,7 +4,7 @@
 .is-paddingless {
   padding: 0;
 }
-$space-amounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100, 175);
+$space-amounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100, 175);
 $sides: (top, bottom, left, right);
 @each $space in $space-amounts {
   @each $side in $sides {

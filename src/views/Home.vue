@@ -28,6 +28,19 @@
             with an emphasis on practical and ethical user experience while creatively solving
             problems.
           </p>
+          <p class="hidden" v-in-viewport.once>
+            Located in Detroit, Michigan and born and raised in Rockford, Illinois, I graduated
+            with a Bachelor's degree in psychological sciences and naturally began making websites.
+          </p>
+          <p class="hidden" v-in-viewport.once>
+            I am constantly learning new technologies when I'm not busy camping, hiking, trying
+            new restaurants and breweries, or traveling.
+          </p>
+          <div class="flex-container hidden" v-in-viewport.once>
+            <a class="m-r-40" href="https://github.com/brodenbeck" target="_blank">Github</a>
+            <a class="m-r-40" href="https://linkedin.com/in/brittarodenbeck" target="_blank">LinkedIn</a>
+            <a href="/resume_rodenbeck.pdf" target="_blank">Resume</a>
+          </div>
         </div>
         <div class="icon__container m-l-50">
           <img
@@ -44,12 +57,12 @@
         class="project"
       >
         <div class="wrapper">
-          <h2
-            class="headline headline--no-background hidden"
+          <h3
+            class="headline headline--no-background m-b-0 hidden"
             v-in-viewport.once
           >
             {{ project.name }}
-          </h2>
+          </h3>
           <div class="project">
             <img :src="project.cover" alt="" class="hidden project__image" v-in-viewport.once>
             <router-link

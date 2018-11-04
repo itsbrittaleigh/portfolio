@@ -24,20 +24,20 @@
         <label>Don’t fill this out: <input name="bot-field"></label>
       </p>
       <div class="flex-container--desktop flex-between">
-        <div class="field m-r-20">
+        <div class="field m-r-20 hidden" v-in-viewport.once>
           <label for="name">Name</label>
           <input type="text" v-model="name">
         </div>
-        <div class="field">
+        <div class="field hidden" v-in-viewport.once>
           <label for="email">Email</label>
           <input type="email" v-model="email">
         </div>
       </div>
-      <div class="field">
+      <div class="field hidden" v-in-viewport.once>
         <label for="message">Message</label>
         <textarea v-model="message"></textarea>
       </div>
-      <div class="contact-form__button-container">
+      <div class="contact-form__button-container hidden" v-in-viewport.once>
         <button type="submit">Send</button>
       </div>
     </template>
