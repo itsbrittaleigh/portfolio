@@ -22,14 +22,14 @@
     </li>
     <li class="project-overview__item hidden" v-in-viewport.once>
       <strong>Project URL: </strong>
-      <a :href="project.url" target="_blank">{{ project.url }}</a>
+      <a :href="project.url" target="_blank" rel="noopener noreferrer">{{ project.url }}</a>
     </li>
     <li
       v-if="project.github"
       class="project-overview__item hidden" v-in-viewport.once>
     >
       <strong>GitHub URL: </strong>
-      <a :href="project.github" target="_blank">{{ project.github }}</a>
+      <a :href="project.github" target="_blank" rel="noopener noreferrer">{{ project.github }}</a>
     </li>
     <li class="project-overview__item project-overview__item--full hidden" v-in-viewport.once>
       <strong>Project overview: </strong>

@@ -42,8 +42,8 @@
             new restaurants and breweries, or traveling.
           </p>
           <div class="flex-container hidden" v-in-viewport.once>
-            <a class="m-r-40" href="https://github.com/brodenbeck" target="_blank">Github</a>
-            <a class="m-r-40" href="https://linkedin.com/in/brittarodenbeck" target="_blank">LinkedIn</a>
+            <a class="m-r-40" href="https://github.com/brodenbeck" target="_blank" rel="noopener noreferrer">Github</a>
+            <a class="m-r-40" href="https://linkedin.com/in/brittarodenbeck" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="/resume_rodenbeck.pdf" target="_blank">Resume</a>
           </div>
         </div>
