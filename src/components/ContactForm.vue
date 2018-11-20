@@ -25,17 +25,23 @@
       </p>
       <div class="flex-container--desktop flex-between">
         <div class="field m-r-20 hidden" v-in-viewport.once>
-          <label for="name">Name</label>
-          <input name="name" type="text" v-model="name">
+          <label for="name">
+            <span>Name</span>
+            <input id="name" type="text" v-model="name">
+          </label>
         </div>
         <div class="field hidden" v-in-viewport.once>
-          <label for="email">Email</label>
-          <input name="email" type="email" v-model="email">
+          <label for="email">
+            <span>Email</span>
+            <input id="email" type="email" v-model="email">
+          </label>
         </div>
       </div>
       <div class="field hidden" v-in-viewport.once>
-        <label for="message">Message</label>
-        <textarea name="message" v-model="message"></textarea>
+        <label for="message">
+          <span>Message</span>
+          <textarea id="message" v-model="message"></textarea>
+        </label>
       </div>
       <div class="contact-form__button-container hidden" v-in-viewport.once>
         <button type="submit">Send</button>
