@@ -3,12 +3,14 @@
     <section class="hero-section">
       <img
         src="../assets/images/covers/portfolio.jpg"
+        alt="Skyline photo of Paris, France overlooking the Seine river"
         class="hero-section__background-image"
       >
       <div class="hero-section__overlay"></div>
       <div class="content">
         <img
           src="../assets/images/portfolio-white.svg"
+          alt="Icon of resposive web design showing computer monitor and mobile phone"
           class="signature signature--home"
           v-in-viewport.once
         >
@@ -28,7 +30,12 @@
       <div class="wrapper">
         <h2 class="headline hidden" v-in-viewport.once>{{ project.name }}</h2>
         <div class="project">
-          <img :src="project.cover" alt="" class="hidden project__image" v-in-viewport.once>
+          <img
+            :src="project.cover"
+            :alt="`${project.name} screenshot mockup`"
+            class="hidden project__image"
+            v-in-viewport.once
+          >
           <router-link
             :to="{
               name: 'project',

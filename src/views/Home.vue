@@ -1,11 +1,16 @@
 <template>
   <div class="main-content">
     <section class="hero-section">
-      <img src="../assets/images/covers/home.jpg" alt="" class="hero-section__background-image">
+      <img
+        src="../assets/images/covers/home.jpg"
+        alt="Photo of Britta overlooking Grand Canyon"
+        class="hero-section__background-image"
+      >
       <div class="hero-section__overlay"></div>
       <div class="content">
         <img
           src="../assets/images/signature.png"
+          alt="Illustration of Britta's signature"
           class="signature signature--home"
           v-in-viewport.once
         >
@@ -45,6 +50,7 @@
         <div class="icon__container m-l-50">
           <img
             src="../assets/images/about-straight-bangs.svg"
+            alt="Icon depiction of Britta"
             class="icon__image hidden"
             v-in-viewport.once
           >
@@ -64,7 +70,12 @@
             {{ project.name }}
           </h3>
           <div class="project">
-            <img :src="project.cover" alt="" class="hidden project__image" v-in-viewport.once>
+            <img
+              :src="project.cover"
+              :alt="`${project.name} screenshot mockup`"
+              class="hidden project__image"
+              v-in-viewport.once
+            >
             <router-link
               :to="{
                 name: 'project',
@@ -90,6 +101,7 @@
       <div class="icon__container">
         <img
           src="../assets/images/portfolio.svg"
+          alt="Icon of resposive web design showing computer monitor and mobile phone"
           class="icon__image hidden"
           v-in-viewport.once
         >
@@ -97,7 +109,11 @@
       <h2 class="headline hidden" v-in-viewport.once>Contact Me</h2>
     </div>
     <section class="hero-section hero-section--form">
-      <img src="../assets/images/covers/form.jpg" alt="" class="hero-section__background-image">
+      <img
+        src="../assets/images/covers/form.jpg"
+        alt="Skyline photo of downtown Detroit, Michigan"
+        class="hero-section__background-image"
+      >
       <div class="hero-section__overlay"></div>
       <div class="content">
         <div class="wrapper">
@@ -109,6 +125,7 @@
       <div class="icon__container">
         <img
           src="../assets/images/contact.svg"
+          alt="Icon of mail being sent"
           class="icon__image hidden"
           v-in-viewport.once
         >

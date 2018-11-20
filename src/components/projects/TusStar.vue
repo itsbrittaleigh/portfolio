@@ -1,6 +1,10 @@
 <template>
   <div class="wrapper">
-    <img src="../../assets/images/covers/tusstar.png" alt="" class="hero--mockup p-t-175">
+    <img
+      src="../../assets/images/covers/tusstar.png"
+      alt="TusStar website screenshot"
+      class="hero--mockup p-t-175"
+    >
     <h2 class="headline hidden" v-in-viewport.once>Project Overview</h2>
     <project-overview :project="project"></project-overview>
   </div>

@@ -3,6 +3,7 @@
     <img
       src="../../assets/images/covers/sidepitch-mobile-application.png"
       class="hero--mockup p-t-175"
+      alt="Sidepitch mobile application mockups"
     >
     <h2 class="headline hidden" v-in-viewport.once>Project Overview</h2>
     <project-overview :project="project"></project-overview>

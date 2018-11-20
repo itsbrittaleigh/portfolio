@@ -26,16 +26,16 @@
       <div class="flex-container--desktop flex-between">
         <div class="field m-r-20 hidden" v-in-viewport.once>
           <label for="name">Name</label>
-          <input type="text" v-model="name">
+          <input name="name" type="text" v-model="name">
         </div>
         <div class="field hidden" v-in-viewport.once>
           <label for="email">Email</label>
-          <input type="email" v-model="email">
+          <input name="email" type="email" v-model="email">
         </div>
       </div>
       <div class="field hidden" v-in-viewport.once>
         <label for="message">Message</label>
-        <textarea v-model="message"></textarea>
+        <textarea name="message" v-model="message"></textarea>
       </div>
       <div class="contact-form__button-container hidden" v-in-viewport.once>
         <button type="submit">Send</button>
@@ -66,17 +66,17 @@ export default {
     },
   },
   methods: {
-    checkForm() {
+    checkForm(event) {
       this.errors = [];
       if (!this.name) this.errors.push('Your name is required.');
       if (!this.email) this.errors.push('You must provide your email.');
       else if (!this.validateEmail(this.email)) this.errors.push('You must provide a valid email address');
       if (!this.message) this.errors.push('You must write a message.');
-      if(this.errors.length === 0) this.handleSubmit();
-      else e.preventDefault();
+      if (this.errors.length === 0) this.handleSubmit();
+      else event.preventDefault();
     },
     validateEmail(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(String(email).toLowerCase());
     },
     encode(data) {
