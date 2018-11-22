@@ -1,0 +1,9 @@
+[Settings]
+ID = "95bef53b-1365-4a8b-8193-faf121a3d19c"
+
+# The following redirect is intended for use with most SPAs that handle
+# routing internally.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
