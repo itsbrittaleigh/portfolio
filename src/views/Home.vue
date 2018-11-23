@@ -1,19 +1,103 @@
 <template>
   <div class="main-content">
     <section class="hero-section">
-      <img
-        src="../assets/images/covers/home.jpg"
-        alt="Photo of Britta overlooking Grand Canyon"
-        class="hero-section__background-image"
-      >
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="../assets/images/covers/home--xlarge.webp"
+          type="image/webp"
+        >
+        <source
+          media="(min-width: 1200px)"
+          srcset="../assets/images/covers/home--xlarge.png"
+          type="image/png"
+        >
+        <source
+          media="(min-width: 780px)"
+          srcset="../assets/images/covers/home--large.webp"
+          type="image/webp"
+        >
+        <source
+          media="(min-width: 780px)"
+          srcset="../assets/images/covers/home--large.png"
+          type="image/png"
+        >
+        <source
+          media="(min-width: 560px)"
+          srcset="../assets/images/covers/home--medium.webp"
+          type="image/webp"
+        >
+        <source
+          media="(min-width: 560px)"
+          srcset="../assets/images/covers/home--medium.png"
+          type="image/png"
+        >
+        <source
+          media="(max-width: 560px)"
+          srcset="../assets/images/covers/home--small.webp"
+          type="image/webp"
+        >
+        <source
+          media="(max-width: 560px)"
+          srcset="../assets/images/covers/home--small.png"
+          type="image/png"
+        >
+        <img
+          src="../assets/images/covers/home--large.png"
+          alt="Photo of Britta overlooking Grand Canyon"
+          class="hero-section__background-image"
+        >
+      </picture>
       <div class="hero-section__overlay"></div>
       <div class="content">
-        <img
-          src="../assets/images/signature.png"
-          alt="Illustration of Britta's signature"
-          class="signature signature--home"
-          v-in-viewport.once
-        >
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="../assets/images/signature--xlarge.webp"
+            type="image/webp"
+          >
+          <source
+            media="(min-width: 1200px)"
+            srcset="../assets/images/signature--xlarge.png"
+            type="image/png"
+          >
+          <source
+            media="(min-width: 780px)"
+            srcset="../assets/images/signature--large.webp"
+            type="image/webp"
+          >
+          <source
+            media="(min-width: 780px)"
+            srcset="../assets/images/signature--large.png"
+            type="image/png"
+          >
+          <source
+            media="(min-width: 560px)"
+            srcset="../assets/images/signature--medium.webp"
+            type="image/webp"
+          >
+          <source
+            media="(min-width: 560px)"
+            srcset="../assets/images/signature--medium.png"
+            type="image/png"
+          >
+          <source
+            media="(max-width: 560px)"
+            srcset="../assets/images/signature--small.webp"
+            type="image/webp"
+          >
+          <source
+            media="(max-width: 560px)"
+            srcset="../assets/images/signature--small.png"
+            type="image/png"
+          >
+          <img
+            src="../assets/images/signature--large.png"
+            alt="Illustration of Britta's signature"
+            class="signature signature--home"
+            v-in-viewport.once
+          >
+        </picture>
         <h1
           class="tagline tagline--bottom tagline--right"
           v-in-viewport.once
@@ -70,12 +154,54 @@
             {{ project.name }}
           </h3>
           <div class="project">
-            <img
-              :src="project.cover"
-              :alt="`${project.name} screenshot mockup`"
-              class="hidden project__image"
-              v-in-viewport.once
-            >
+            <picture>
+              <source
+                media="(min-width: 1200px)"
+                :srcset="project.cover.xlargeWebp"
+                type="image/webp"
+              >
+              <source
+                media="(min-width: 1200px)"
+                :srcset="project.cover.xlarge"
+                type="image/png"
+              >
+              <source
+                media="(min-width: 780px)"
+                :srcset="project.cover.largeWebp"
+                type="image/webp"
+              >
+              <source
+                media="(min-width: 780px)"
+                :srcset="project.cover.large"
+                type="image/png"
+              >
+              <source
+                media="(min-width: 560px)"
+                :srcset="project.cover.mediumWebp"
+                type="image/webp"
+              >
+              <source
+                media="(min-width: 560px)"
+                :srcset="project.cover.medium"
+                type="image/png"
+              >
+              <source
+                media="(max-width: 560px)"
+                :srcset="project.cover.smallWebp"
+                type="image/webp"
+              >
+              <source
+                media="(max-width: 560px)"
+                :srcset="project.cover.small"
+                type="image/png"
+              >
+              <img
+                :src="project.cover.large"
+                :alt="`${project.name} screenshot mockup`"
+                class="project__image hidden"
+                v-in-viewport.once
+              >
+            </picture>
             <router-link
               :to="{
                 name: 'project',
@@ -109,11 +235,53 @@
       <h2 class="headline hidden" v-in-viewport.once>Contact Me</h2>
     </div>
     <section class="hero-section hero-section--form">
-      <img
-        src="../assets/images/covers/form.jpg"
-        alt="Skyline photo of downtown Detroit, Michigan"
-        class="hero-section__background-image"
-      >
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="../assets/images/covers/form--xlarge.webp"
+          type="image/webp"
+        >
+        <source
+          media="(min-width: 1200px)"
+          srcset="../assets/images/covers/form--xlarge.png"
+          type="image/png"
+        >
+        <source
+          media="(min-width: 780px)"
+          srcset="../assets/images/covers/form--large.webp"
+          type="image/webp"
+        >
+        <source
+          media="(min-width: 780px)"
+          srcset="../assets/images/covers/form--large.png"
+          type="image/png"
+        >
+        <source
+          media="(min-width: 560px)"
+          srcset="../assets/images/covers/form--medium.webp"
+          type="image/webp"
+        >
+        <source
+          media="(min-width: 560px)"
+          srcset="../assets/images/covers/form--medium.png"
+          type="image/png"
+        >
+        <source
+          media="(max-width: 560px)"
+          srcset="../assets/images/covers/form--small.webp"
+          type="image/webp"
+        >
+        <source
+          media="(max-width: 560px)"
+          srcset="../assets/images/covers/form--small.png"
+          type="image/png"
+        >
+        <img
+          src="../assets/images/covers/form--large.png"
+          alt="Skyline photo of downtown Detroit, Michigan"
+          class="hero-section__background-image"
+        >
+      </picture>
       <div class="hero-section__overlay"></div>
       <div class="content">
         <div class="wrapper">
