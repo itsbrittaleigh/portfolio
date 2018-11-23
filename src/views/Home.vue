@@ -126,9 +126,25 @@
             new restaurants and breweries, or traveling.
           </p>
           <div class="flex-container hidden" v-in-viewport.once>
-            <a class="m-r-40" href="https://github.com/brodenbeck" target="_blank" rel="noopener noreferrer">Github</a>
-            <a class="m-r-40" href="https://linkedin.com/in/brittarodenbeck" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="/resume_rodenbeck.pdf" target="_blank">Resume</a>
+            <a
+              class="m-r-40"
+              href="https://github.com/brodenbeck"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Britta's GitHub profile"
+            >
+              Github
+            </a>
+            <a
+              class="m-r-40"
+              href="https://linkedin.com/in/brittarodenbeck"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Britta's LinkedIn profile"
+            >
+              LinkedIn
+            </a>
+            <a href="/resume_rodenbeck.pdf" target="_blank" title="Britta's resume PDF">Resume</a>
           </div>
         </div>
         <div class="icon__container m-l-50">
@@ -209,6 +225,7 @@
                   title: project.slug,
                 },
               }"
+              :title="`${project.name} project overview`"
               class="hidden button button--arrow-right project__button"
               v-in-viewport.once
             >
@@ -221,6 +238,7 @@
         :to="{
           name: 'portfolio'
         }"
+        title="Portfolio project index"
       >
         View all projects
       </router-link>

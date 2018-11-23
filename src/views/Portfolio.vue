@@ -127,6 +127,7 @@
                 title: project.slug,
               },
             }"
+            :title="`${project.name} project overview`"
             class="hidden button button--arrow-right project__button"
             v-in-viewport.once
           >
