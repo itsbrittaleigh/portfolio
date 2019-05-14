@@ -163,75 +163,79 @@
         class="project"
       >
         <div class="wrapper">
-          <h3
-            class="headline headline--no-background m-b-0 hidden"
+          <router-link
+            :to="{
+              name: 'project',
+              params: {
+                title: project.slug,
+              },
+            }"
+            :title="`${project.name} project overview`"
             v-in-viewport.once
           >
-            {{ project.name }}
-          </h3>
-          <div class="project">
-            <picture>
-              <source
-                media="(min-width: 1200px)"
-                :srcset="project.cover.xlargeWebp"
-                type="image/webp"
-              >
-              <source
-                media="(min-width: 1200px)"
-                :srcset="project.cover.xlarge"
-                type="image/png"
-              >
-              <source
-                media="(min-width: 780px)"
-                :srcset="project.cover.largeWebp"
-                type="image/webp"
-              >
-              <source
-                media="(min-width: 780px)"
-                :srcset="project.cover.large"
-                type="image/png"
-              >
-              <source
-                media="(min-width: 560px)"
-                :srcset="project.cover.mediumWebp"
-                type="image/webp"
-              >
-              <source
-                media="(min-width: 560px)"
-                :srcset="project.cover.medium"
-                type="image/png"
-              >
-              <source
-                media="(max-width: 560px)"
-                :srcset="project.cover.smallWebp"
-                type="image/webp"
-              >
-              <source
-                media="(max-width: 560px)"
-                :srcset="project.cover.small"
-                type="image/png"
-              >
-              <img
-                :src="project.cover.large"
-                :alt="`${project.name} screenshot mockup`"
-                class="project__image hidden"
-                v-in-viewport.once
-              >
-            </picture>
-            <router-link
-              :to="{
-                name: 'project',
-                params: {
-                  title: project.slug,
-                },
-              }"
-              :title="`${project.name} project overview`"
-              class="hidden button button--arrow-right project__button"
+            <h3
+              class="headline headline--no-background m-b-0 hidden"
               v-in-viewport.once
             >
-              Learn more
-            </router-link>
-          </div>
+              {{ project.name }}
+            </h3>
+            <div class="project">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  :srcset="project.cover.xlargeWebp"
+                  type="image/webp"
+                >
+                <source
+                  media="(min-width: 1200px)"
+                  :srcset="project.cover.xlarge"
+                  type="image/png"
+                >
+                <source
+                  media="(min-width: 780px)"
+                  :srcset="project.cover.largeWebp"
+                  type="image/webp"
+                >
+                <source
+                  media="(min-width: 780px)"
+                  :srcset="project.cover.large"
+                  type="image/png"
+                >
+                <source
+                  media="(min-width: 560px)"
+                  :srcset="project.cover.mediumWebp"
+                  type="image/webp"
+                >
+                <source
+                  media="(min-width: 560px)"
+                  :srcset="project.cover.medium"
+                  type="image/png"
+                >
+                <source
+                  media="(max-width: 560px)"
+                  :srcset="project.cover.smallWebp"
+                  type="image/webp"
+                >
+                <source
+                  media="(max-width: 560px)"
+                  :srcset="project.cover.small"
+                  type="image/png"
+                >
+                <img
+                  :src="project.cover.large"
+                  :alt="`${project.name} screenshot mockup`"
+                  class="project__image hidden"
+                  v-in-viewport.once
+                >
+              </picture>
+              <button
+                class="hidden button button--arrow-right project__button"
+                v-in-viewport.once
+              >
+                Learn more
+              </button>
+            </div>
+          </router-link>
         </div>
       </section>
       <router-link
