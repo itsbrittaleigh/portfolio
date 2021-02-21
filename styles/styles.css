@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
+@font-face {
+  src: url("../fonts/Alegreya-Regular.ttf") format("truetype");
+  font-family: "Alegreya";
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --font: "Alegreya", "Georgia", serif;
-  --bold: 700;
   --normal: 400;
   --black: #121212;
   --white: #FFFFFF;
