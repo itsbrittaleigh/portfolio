@@ -219,7 +219,7 @@ textarea {
 }
 
 .errors__container {
-  margin: 0 0 24px;
+  margin: 0 0 48px;
   padding: 0;
 }
 
@@ -231,4 +231,21 @@ textarea {
 
 .errors__error-item:not(:last-of-type) {
   margin-bottom: 12px;
+}
+
+.success {
+  display: none;
+  margin: 0 0 48px;
+  text-align: center;
+  visibility: hidden;
+}
+
+.is-visible {
+  display: block;
+  visibility: visible;
+}
+
+.is-hidden {
+  display: none;
+  visibility: hidden;
 }

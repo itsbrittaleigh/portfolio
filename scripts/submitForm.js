@@ -1,5 +1,6 @@
 const formEl = document.querySelector('#contact-form');
 const errorsEl = document.querySelector('#errors-container');
+const successEl = document.querySelector('#success-container');
 
 /**
  * Validate form for errors
@@ -42,6 +43,11 @@ const displayErrors = (errors) => {
   });
 };
 
+const onSuccessCB = () => {
+  successEl.classList.add('is-visible');
+  formEl.classList.add('is-hidden');
+};
+
 /**
  * Submit data to Netlify
  * @param {*} formData 
@@ -52,7 +58,7 @@ const submitForm = (formData) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => console.log('Form successfully submitted'))
+    .then((data) => onSuccessCB(data))
     .catch((error) => alert(error));
 };
 
