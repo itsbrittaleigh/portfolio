@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Britta Rodenbeck | User Experience Developer</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="main-content">
+      <section id="social" class="social-links">
+        <ul>
+          <li>
+            <a href="https://instagram.com/itsbrittaleigh" target="_blank" rel="noopener noreferrer">
+              <img
+                src="./images/instagram.svg"
+                alt="Instagram icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/itsbrittaleigh" target="_blank" rel="noopener noreferrer">
+              <img
+                src="./images/github.svg"
+                alt="GitHub icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/itsbrittaleigh" target="_blank" rel="noopener noreferrer">
+              <img
+                src="./images/linkedin.svg"
+                alt="LinkedIn icon"
+              />
+            </a>
+          </li>
+          <li>
+            <button class="social-links__button" id="contact-button">
+              <img
+                src="./images/contact.svg"
+                alt="Contact icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section id="hero" class="hero">
+        <div class="wrapper">
+          <h1>
+            Britta Leigh Rodenbeck
+            <span>User experience developer</span>
+          </h1>
+        </div>
+      </section>
+    </div>
+    <section class="modal" id="contact-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__card" id="modal-card">
+        <button class="modal__close-button" id="close-button">
+          <img src="./images/close.svg" alt="Close icon" />
+        </button>
+        <h2>Give me a shout</h2>
+        <ul id="errors-container" class="errors__container"></ul>
+        <form name="contact" method="POST" data-netlify="true" id="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" />
+          </label>
+          <label>
+            Email address
+            <input type="email" name="email" />
+          </label>
+          <label>
+            Message
+            <textarea name="message"></textarea>
+          </label>
+          <div class="button-container">
+            <button class="button" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <script src="./scripts/modal.js"></script>
+  <script src="./scripts/submitForm.js"></script>
+</body>
+</html>

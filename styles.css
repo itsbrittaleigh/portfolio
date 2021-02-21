@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
+
+:root {
+  --font: "Alegreya", "Georgia", serif;
+  --bold: 700;
+  --normal: 400;
+  --black: #121212;
+  --white: #FFFFFF;
+  --red: #8D021F;
+  --border-radius: 5px;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  color: var(--black);
+  font-family: var(--font);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+}
+
+h1 span {
+  display: block;
+  font-size: 24px;
+  line-height: 1.35;
+  margin-top: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 84px;
+    letter-spacing: 4px;
+  }
+
+  h1 span {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  font-weight: var(--normal);
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: calc(100% - 48px);
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 1200px;
+    width: calc(100vw - 96px);
+  }
+}
+
+/* Hero */
+.hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: calc(100vw - 44px); /* width + offset for social icons*/
+}
+
+/* Social media */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  right: 24px;
+  top: 0;
+}
+
+.social-links ul {
+  background-color: var(--white);
+  padding: 48px 0;
+}
+
+.social-links li {
+  list-style: none;
+  margin: 0;
+}
+
+.social-links a,
+.social-links__button {
+  display: block;
+  padding: 18px 0;
+}
+
+.social-links__button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.social-links:before {
+  background-color: var(--black);
+  content: '';
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transition: height linear 2s;
+  width: 1px;
+  z-index: -1;
+}
+
+/* Modal */
+.modal__overlay {
+  background-image: linear-gradient(148deg, rgba(15, 15, 15,0.04) 0%, rgba(15, 15, 15,0.04) 35%,rgba(113, 113, 113,0.04) 35%, rgba(113, 113, 113,0.04) 42%,rgba(210, 210, 210,0.04) 42%, rgba(210, 210, 210,0.04) 100%),linear-gradient(70deg, rgba(15, 15, 15,0.04) 0%, rgba(15, 15, 15,0.04) 25%,rgba(113, 113, 113,0.04) 25%, rgba(113, 113, 113,0.04) 30%,rgba(210, 210, 210,0.04) 30%, rgba(210, 210, 210,0.04) 100%),linear-gradient(65deg, rgba(15, 15, 15,0.04) 0%, rgba(15, 15, 15,0.04) 13%,rgba(113, 113, 113,0.04) 13%, rgba(113, 113, 113,0.04) 27%,rgba(210, 210, 210,0.04) 27%, rgba(210, 210, 210,0.04) 100%),linear-gradient(90deg, rgb(18,18,18),rgb(18,18,18));
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transition: 0.2s ease-in;
+  width: 100vw;
+}
+
+.modal__card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.25);
+  left: 50%;
+  max-width: 640px;
+  opacity: 0;
+  padding: 48px 24px;
+  pointer-events: none;
+  position: fixed;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease-in;
+  width: 95vw;
+}
+
+.modal.is-active .modal__overlay {
+  opacity: 0.9;
+}
+
+.modal.is-active .modal__card {
+  opacity: 1;
+  pointer-events: all;
+  top: 50%;
+}
+
+.modal__close-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Form */
+label {
+  display: block;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+input,
+textarea {
+  border: 1px solid var(--black);
+  display: block;
+  font-size: 16px;
+  margin: 6px 0 24px;
+  padding: 12px;
+  width: 100%;
+}
+
+textarea {
+  height: 150px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  background-color: var(--black);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+/* Validation */
+.errors__container:empty {
+  margin: 0;
+}
+
+.errors__container {
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.errors__error-item {
+  color: var(--red);
+  list-style: none;
+  text-align: center;
+}
+
+.errors__error-item:not(:last-of-type) {
+  margin-bottom: 12px;
+}
