@@ -1,152 +1,3 @@
-@font-face {
-  src: url("../fonts/Alegreya-Regular.ttf") format("truetype");
-  font-family: "Alegreya";
-  font-weight: 400;
-  font-style: normal;
-}
-
-:root {
-  --font: "Alegreya", "Georgia", serif;
-  --normal: 400;
-  --black: #121212;
-  --gray: #3B3B3B;
-  --white: #FFFFFF;
-  --error: #8D021F;
-  --accent: #5DA271;
-  --border-radius: 5px;
-}
-
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-
-body,
-html {
-  background-color: var(--white);
-  color: var(--black);
-  font-family: var(--font);
-  margin: 0;
-  overflow-x: hidden;
-}
-
-h1 {
-  font-size: 48px;
-  font-weight: normal;
-  line-height: 1;
-  margin: 0;
-}
-
-h1 span {
-  color: var(--gray);
-  display: block;
-  font-size: 24px;
-  line-height: 1.35;
-  margin-top: 12px;
-}
-
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 84px;
-    letter-spacing: 4px;
-  }
-
-  h1 span {
-    font-size: 48px;
-  }
-}
-
-h2 {
-  font-weight: var(--normal);
-  text-align: center;
-  margin: 0 0 48px;
-}
-
-a {
-  text-decoration: none;
-}
-
-.wrapper {
-  margin: 0 auto;
-  width: calc(100% - 48px);
-}
-
-@media only screen and (min-width: 768px) {
-  .wrapper {
-    max-width: 1200px;
-    width: calc(100vw - 96px);
-  }
-}
-
-/* Hero */
-.hero {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  position: relative;
-  width: calc(100vw - 44px); /* width + offset for social icons*/
-}
-
-/* Social media */
-.social-links {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  position: fixed;
-  right: 24px;
-  top: 0;
-}
-
-.social-links ul {
-  background-color: var(--white);
-  padding: 48px 0;
-}
-
-.social-links li {
-  list-style: none;
-  margin: 0;
-}
-
-.social-links a,
-.social-links__button {
-  display: block;
-  padding: 18px 0;
-}
-
-.social-links__button {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-}
-
-.social-links a path,
-.social-links__button path {
-  fill: var(--black);
-  transition: ease-in-out 0.2s;
-}
-
-.social-links a:hover path,
-.social-links__button:hover path {
-  fill: var(--accent);
-}
-
-
-.social-links:before {
-  background-color: var(--black);
-  content: '';
-  height: 100%;
-  left: 50%;
-  position: absolute;
-  top: 0;
-  transition: height linear 2s;
-  width: 1px;
-  z-index: -1;
-}
-
 /* Modal */
 .modal__overlay {
   background-image: linear-gradient(148deg, rgba(15, 15, 15,0.04) 0%, rgba(15, 15, 15,0.04) 35%,rgba(113, 113, 113,0.04) 35%, rgba(113, 113, 113,0.04) 42%,rgba(210, 210, 210,0.04) 42%, rgba(210, 210, 210,0.04) 100%),linear-gradient(70deg, rgba(15, 15, 15,0.04) 0%, rgba(15, 15, 15,0.04) 25%,rgba(113, 113, 113,0.04) 25%, rgba(113, 113, 113,0.04) 30%,rgba(210, 210, 210,0.04) 30%, rgba(210, 210, 210,0.04) 100%),linear-gradient(65deg, rgba(15, 15, 15,0.04) 0%, rgba(15, 15, 15,0.04) 13%,rgba(113, 113, 113,0.04) 13%, rgba(113, 113, 113,0.04) 27%,rgba(210, 210, 210,0.04) 27%, rgba(210, 210, 210,0.04) 100%),linear-gradient(90deg, rgb(18,18,18),rgb(18,18,18));
@@ -194,6 +45,11 @@ a {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 48px;
 }
 
 /* Form */
@@ -253,15 +109,8 @@ textarea {
 }
 
 .success {
-  display: none;
   margin: 0 0 48px;
   text-align: center;
-  visibility: hidden;
-}
-
-.is-visible {
-  display: block;
-  visibility: visible;
 }
 
 .is-hidden {
