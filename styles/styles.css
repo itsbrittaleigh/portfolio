@@ -9,8 +9,10 @@
   --font: "Alegreya", "Georgia", serif;
   --normal: 400;
   --black: #121212;
+  --gray: #3B3B3B;
   --white: #FFFFFF;
-  --red: #8D021F;
+  --error: #8D021F;
+  --accent: #5DA271;
   --border-radius: 5px;
 }
 
@@ -22,6 +24,7 @@
 
 body,
 html {
+  background-color: var(--white);
   color: var(--black);
   font-family: var(--font);
   margin: 0;
@@ -36,6 +39,7 @@ h1 {
 }
 
 h1 span {
+  color: var(--gray);
   display: block;
   font-size: 24px;
   line-height: 1.35;
@@ -119,6 +123,18 @@ a {
   cursor: pointer;
 }
 
+.social-links a path,
+.social-links__button path {
+  fill: var(--black);
+  transition: ease-in-out 0.2s;
+}
+
+.social-links a:hover path,
+.social-links__button:hover path {
+  fill: var(--accent);
+}
+
+
 .social-links:before {
   background-color: var(--black);
   content: '';
@@ -184,12 +200,12 @@ a {
 label {
   display: block;
   font-size: 12px;
-  text-transform: lowercase;
 }
 
 input,
 textarea {
   border: 1px solid var(--black);
+  border-radius: 3px;
   display: block;
   font-size: 16px;
   margin: 6px 0 24px;
@@ -214,7 +230,6 @@ textarea {
   padding: 12px 24px;
   border-radius: var(--border-radius);
   letter-spacing: 1px;
-  text-transform: lowercase;
 }
 
 /* Validation */
@@ -228,7 +243,7 @@ textarea {
 }
 
 .errors__error-item {
-  color: var(--red);
+  color: var(--error);
   list-style: none;
   text-align: center;
 }
