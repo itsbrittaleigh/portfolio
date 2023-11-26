@@ -84,6 +84,7 @@ const ContactModal: React.FC<IContactModalProps> = ({ isOpen, onClose }) => {
             </p>
           )}
           <form className={isSuccessful ? 'is-hidden' : ''} name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="contact" />
             <label>
               Name
               <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
@@ -151,7 +152,10 @@ const ContactModal: React.FC<IContactModalProps> = ({ isOpen, onClose }) => {
     fetch('/', {
       method: 'POST',
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: new URLSearchParams({
+        'form-name': 'contact',
+        ...formData
+      }).toString(),
     })
       .then(() => setIsSuccessful(true))
       .catch((error) => alert(error));
