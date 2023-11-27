@@ -1,0 +1,22 @@
+.project {
+  border: 0px solid var(--gray);
+  border-bottom-width: 1px;
+  color: var(--black);
+  display: block;
+  padding: 24px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.project:first-of-type {
+  border-top-width: 1px;
+}
+
+.project:hover {
+  border-bottom-color: var(--accent);
+  border-bottom-width: 3px;
+}
+
+.project__description {
+  margin: 0;
+}
