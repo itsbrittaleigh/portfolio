@@ -1,12 +1,12 @@
 @font-face {
-  src: url("./fonts/Alegreya-Regular.ttf") format("truetype");
-  font-family: "Alegreya";
+  src: url("./fonts/Literata-Regular.ttf") format("truetype");
+  font-family: "Literata";
   font-weight: 400;
   font-style: normal;
 }
 
 :root {
-  --font: "Alegreya", "Georgia", serif;
+  --font: "Literata", "Georgia", serif;
   --normal: 400;
   --black: #121212;
   --gray: #3B3B3B;
