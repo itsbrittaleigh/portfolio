@@ -33,7 +33,7 @@
 .social-links a path,
 .social-links__button path {
   fill: var(--black);
-  transition: ease-in-out 0.2s;
+  transition: var(--transition);
 }
 
 .social-links a:hover path,
@@ -41,15 +41,14 @@
   fill: var(--accent);
 }
 
-
 .social-links:before {
+  animation: 3s ease-out 0s 1 drawDown;
   background-color: var(--black);
   content: '';
   height: 100%;
   left: 50%;
   position: absolute;
   top: 0;
-  transition: height linear 2s;
   width: 1px;
   z-index: -1;
 }

@@ -6,14 +6,33 @@
 }
 
 :root {
+  /* Fonts */
   --font: "Literata", "Georgia", serif;
   --normal: 400;
+
+  /* Colors */
   --black: #121212;
   --gray: #3B3B3B;
   --white: #FFFFFF;
   --error: #8D021F;
   --accent: #5DA271;
-  --border-radius: 5px;
+
+  /* Shapes */
+  --border-radius--large: 5px;
+  --border-radius--small: 3px;
+
+  /* Animations */
+  --transition: 0.2s ease-in-out;
+}
+
+@keyframes drawDown {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
 }
 
 *,
