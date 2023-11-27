@@ -24,11 +24,10 @@
 }
 
 .hero {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 144px) /* offset for template padding*/;
   justify-content: center;
-  position: relative;
-  width: calc(100vw - 44px); /* width + offset for social icons*/
+  padding-bottom: 144px;
+  width: calc(100% - 44px); /* width + offset for social icons*/
 }
