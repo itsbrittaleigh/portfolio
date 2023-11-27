@@ -81,7 +81,7 @@ li {
 
 .wrapper {
   margin: 0 auto;
-  padding-top: 144px;
+  padding: 144px 48px 0 0;
   width: calc(100% - 48px);
 }
 
