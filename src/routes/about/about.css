@@ -1,0 +1,7 @@
+.skill-list {
+  margin-bottom: 16px;
+}
+
+.skill-list--two-column {
+  columns: 2;
+}
