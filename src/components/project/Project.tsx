@@ -3,7 +3,7 @@ import './project.css';
 import { IProject } from '../../routes/projects/projectData';
 
 interface IProjectProps {
-  project: IProject;
+  project: Pick<IProject, 'title' | 'description' | 'githubLink'>;
 }
 
 const Project: React.FC<IProjectProps> = ({ project }) => {
