@@ -82,6 +82,10 @@ const Project = () => {
                     {role}
                   </li>
                 )
+              } else {
+                return (
+                  <li>{name} — {role}</li>
+                )
               }
             })}
           </ul>
