@@ -16,6 +16,10 @@
   border-bottom-color: transparent;
 }
 
+.project__title {
+  margin-top: 0;
+}
+
 .project__description {
   margin: 0;
 }

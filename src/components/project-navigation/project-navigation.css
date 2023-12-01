@@ -1,0 +1,15 @@
+.project-navigation {
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  margin: 128px 0;
+}
+
+.project-navigation__link {
+  color: var(--black);
+  transition: var(--transition);
+}
+
+.project-navigation__link:hover {
+  color: var(--accent);
+}

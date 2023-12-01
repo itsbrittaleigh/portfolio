@@ -12,6 +12,13 @@
   font-style: italic;
 }
 
+@font-face {
+  src: url("./fonts/Literata-Bold.ttf") format("truetype");
+  font-family: "Literata";
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   /* Fonts */
   --font: "Literata", "Georgia", serif;
@@ -59,17 +66,20 @@ html {
 
 h1 {
   font-size: 28px;
+  font-weight: normal;
   line-height: 1.15;
   margin: 0 0 16px;
 }
 
 h2 {
   font-size: 24px;
+  font-weight: normal;
   margin: 0 0 16px;
 }
 
 h3 {
   font-size: 22px;
+  font-weight: normal;
   margin: 32px 0 16px;
 }
 

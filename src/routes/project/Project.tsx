@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { clientProjects, sideProjects } from '../projects/projectData';
 import NotFound from './NotFound';
 import './project.css';
+import ProjectNavigation from '../../components/project-navigation/ProjectNavigation';
+import ScrollToTop from '../../components/scroll-to-top/ScrollToTop';
 
 const Project = () => {
   const params = useParams();
@@ -11,6 +13,10 @@ const Project = () => {
   const allProjects = clientProjects.concat(sideProjects);
   const currentProject = allProjects.find(project => project.slug === slug);
   const isClientProject = !!clientProjects.find(project => project.slug === slug);
+  
+  const currentProjectIndex = allProjects.findIndex(project => project.slug === slug);
+  const nextProjectIndex = currentProjectIndex + 1 >= allProjects.length ? 0 : currentProjectIndex + 1;
+  const previousProjectIndex = currentProjectIndex - 1 <= 0 ? allProjects.length - 1 : currentProjectIndex - 1;
 
   if (!currentProject) return <NotFound />;
 
@@ -81,6 +87,12 @@ const Project = () => {
           </ul>
         </section>
       )}
+
+      <ProjectNavigation
+        nextProject={allProjects[nextProjectIndex]}
+        previousProject={allProjects[previousProjectIndex]}
+      />
+      <ScrollToTop />
     </div>
   );
 };
