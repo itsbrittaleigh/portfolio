@@ -13,8 +13,7 @@
 }
 
 .project:hover {
-  border-bottom-color: var(--accent);
-  border-bottom-width: 3px;
+  border-bottom-color: transparent;
 }
 
 .project__description {

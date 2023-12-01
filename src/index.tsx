@@ -9,6 +9,7 @@ import SocialLinks from './components/social-links/SocialLinks';
 import Header from './components/header/Header';
 import About from './routes/about/About';
 import Projects from './routes/projects/Projects';
+import Project from './routes/project/Project';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     path: '/projects',
     element: <Projects />
   },
+  {
+    path: '/projects/:slug',
+    element: <Project />
+  }
 ]);
 
 root.render(
@@ -42,4 +47,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals(console.log);
+// reportWebVitals(console.log);

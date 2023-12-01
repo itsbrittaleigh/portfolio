@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  src: url("./fonts/Literata-Italic.ttf") format("truetype");
+  font-family: "Literata";
+  font-weight: 400;
+  font-style: italic;
+}
+
 :root {
   /* Fonts */
   --font: "Literata", "Georgia", serif;
@@ -66,7 +73,7 @@ h3 {
   margin: 0 0 16px;
 }
 
-p, li {
+p, li, a {
   font-size: 20px;
   line-height: 1.5;
 }
@@ -77,6 +84,27 @@ p {
 
 li {
   margin: 0 0 8px;
+}
+
+a {
+  color: var(--accent);
+  position: relative;
+  text-decoration: none;
+}
+
+a:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: var(--accent);
+  bottom: 1px;
+  left: 0;
+  transition: var(--transition);
+}
+
+a:hover:after {
+  width: 100%;
 }
 
 .wrapper {
@@ -91,7 +119,7 @@ li {
 }
 
 .section {
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 
 @media only screen and (min-width: 768px) {

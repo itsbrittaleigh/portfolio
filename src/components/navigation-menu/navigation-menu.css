@@ -25,13 +25,10 @@
   width: 100vw;
 }
 
-.navigation-menu__list-item {
-  font-size: 28px;
-}
-
 .navigation-menu__link {
   color: var(--black);
   display: block;
+  font-size: 28px;
   margin-bottom: 8px;
   padding: 8px 0;
   text-decoration: none;
@@ -43,7 +40,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .navigation-menu__list-item {
+  .navigation-menu__link {
     font-size: 48px;
   }
 }

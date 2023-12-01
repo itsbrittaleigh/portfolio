@@ -13,7 +13,7 @@ const NavigationMenu: React.FC<INavigationMenuProps> = ({ isOpen }) => {
           <a className="navigation-menu__link" href="/about">About</a>
         </li>
         <li className="navigation-menu__list-item">
-          <a className="navigation-menu__link" href="/projects">🚧 Projects</a>
+          <a className="navigation-menu__link" href="/projects">Projects</a>
         </li>
       </ul>
     </nav>
