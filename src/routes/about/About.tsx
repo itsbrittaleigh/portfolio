@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="content">
       <section className="section">
-        <h1>👋🏼 Hello, there!</h1>
+        <h1><span aria-hidden>👋🏼</span> Hello, there!</h1>
         <p>
           I’m Britta Rodenbeck, a frontend engineer with a passion for crafting exceptional user experiences.
           With eight years in the dynamic world of web and software development, I’ve had the privilege of
@@ -34,7 +34,7 @@ const About = () => {
         </p>
       </section>
       <section className="section">
-        <h2>📚 Beyond the code</h2>
+        <h2><span aria-hidden>📚</span> Beyond the code</h2>
         <p>
           Away from the keyboard, you’ll find me hiking, biking, and camping in the warmer months and
           snuggling with my cat, a good library book, and hot chocolate in the colder ones. I am studying
@@ -44,7 +44,7 @@ const About = () => {
         </p>
       </section>
       <section className="section">
-        <h2>💻 Technical skills</h2>
+        <h2><span aria-hidden>💻</span> Technical skills</h2>
         <p>
           Every engineer has their strengths and weaknesses. Below are the languages, frameworks, programs,
           etc. that I both excel with and—more importantly—love to work with.
@@ -94,7 +94,7 @@ const About = () => {
         </ul>
       </section>
       <section className="section">
-        <h2>👯 Let's connect</h2>
+        <h2><span aria-hidden>👯</span> Let's connect</h2>
         <p>
           I’m excited about the potential for meaningful collaborations and am always open to connecting
           with like-minded professionals. If you’re looking for a frontend engineer who combines
@@ -103,7 +103,7 @@ const About = () => {
           possibilities together.
         </p>
         <p>
-          👋🏼 Thank you for stopping by!
+          <span aria-hidden>👋🏼</span> Thank you for stopping by!
         </p>
       </section>
     </div>
