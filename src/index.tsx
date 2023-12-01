@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './normalize.css';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './routes/home/Home';
 import SocialLinks from './components/social-links/SocialLinks';
