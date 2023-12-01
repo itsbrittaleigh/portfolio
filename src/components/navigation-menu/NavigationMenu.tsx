@@ -9,13 +9,13 @@ const NavigationMenu: React.FC<INavigationMenuProps> = ({ isOpen }) => {
   return (
     <nav className={`navigation-menu ${isOpen ? 'is-open' : ''}`}>
       <ul className="navigation-menu__list">
-        <li className="navigation-menu__list-item">
+        <li>
           <a className="navigation-menu__link" href="/about">About</a>
         </li>
-        <li className="navigation-menu__list-item">
+        <li>
           <a className="navigation-menu__link" href="/projects">Projects</a>
         </li>
-        <li className="navigation-menu__list-item">
+        <li>
           <a
             className="navigation-menu__link"
             href="/britta-rodenbeck__resume.pdf"
