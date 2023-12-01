@@ -124,7 +124,7 @@ a:hover:after {
 }
 
 .content {
-  padding-bottom: 144px;
+  padding-bottom: 64px;
   max-width: 795px;
 }
 
@@ -133,6 +133,10 @@ a:hover:after {
 }
 
 @media only screen and (min-width: 768px) {
+  .content {
+    padding-bottom: 144px;
+  }
+
   .wrapper {
     max-width: 1200px;
     width: calc(100vw - 96px);

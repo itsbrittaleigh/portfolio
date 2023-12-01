@@ -14,17 +14,13 @@ const ProjectNavigation: React.FC<IProjectNavigationProps> = ({ nextProject, pre
       className="project-navigation__link"
       to={`/projects/${previousProject.slug}`}
     >
-      <strong>Previous:</strong>
-      &nbsp;
-      {previousProject.title}
+      <strong>Previous:</strong> {previousProject.title}
     </Link>
     <Link
-      className="project-navigation__link"
+      className="project-navigation__link project-navigation__link--right"
       to={`/projects/${nextProject.slug}`}
     >
-      <strong>Next:</strong>
-      &nbsp;
-      {nextProject.title}
+      <strong>Next:</strong> {nextProject.title}
     </Link>
   </nav>
 );
