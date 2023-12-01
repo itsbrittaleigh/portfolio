@@ -9,6 +9,7 @@
   top: 0;
   transition: var(--transition);
   width: 100vw;
+  z-index: 3;
 }
 
 .modal__card {
@@ -25,6 +26,7 @@
   transform: translate(-50%, -50%);
   transition: var(--transition);
   width: 95vw;
+  z-index: 4;
 }
 
 .modal.is-active .modal__overlay {
