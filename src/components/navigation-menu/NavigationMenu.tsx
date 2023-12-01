@@ -15,6 +15,15 @@ const NavigationMenu: React.FC<INavigationMenuProps> = ({ isOpen }) => {
         <li className="navigation-menu__list-item">
           <a className="navigation-menu__link" href="/projects">Projects</a>
         </li>
+        <li className="navigation-menu__list-item">
+          <a
+            className="navigation-menu__link"
+            href="/britta-rodenbeck__resume.pdf"
+            target="_blank"
+          >
+            Resume
+          </a>
+        </li>
       </ul>
     </nav>
   );
