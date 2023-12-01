@@ -41,6 +41,10 @@
   fill: var(--accent);
 }
 
+.social-links a:hover:after {
+  width: 0;
+}
+
 .social-links:before {
   animation: 3s ease-out 0s 1 drawDown;
   background-color: var(--black);
