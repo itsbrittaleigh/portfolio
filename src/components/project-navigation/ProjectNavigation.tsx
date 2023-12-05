@@ -2,6 +2,7 @@ import React from 'react';
 import { IProject } from '../../routes/projects/projectData';
 import { Link } from 'react-router-dom';
 import './project-navigation.css';
+import GradientLink from '../gradient-link/GradientLink';
 
 interface IProjectNavigationProps {
   nextProject: Pick<IProject, 'slug' | 'title'>;
@@ -10,18 +11,26 @@ interface IProjectNavigationProps {
 
 const ProjectNavigation: React.FC<IProjectNavigationProps> = ({ nextProject, previousProject }) => (
   <nav className="project-navigation">
-    <Link
+    <GradientLink
       className="project-navigation__link"
-      to={`/projects/${previousProject.slug}`}
-    >
-      <strong>Previous:</strong> {previousProject.title}
-    </Link>
-    <Link
+      href={`/projects/${previousProject.slug}`}
+      isRRLink
+      text={
+        <>
+          <strong>Previous:</strong> {previousProject.title}
+        </>
+      }
+    />
+    <GradientLink
       className="project-navigation__link project-navigation__link--right"
-      to={`/projects/${nextProject.slug}`}
-    >
-      <strong>Next:</strong> {nextProject.title}
-    </Link>
+      href={`/projects/${nextProject.slug}`}
+      isRRLink
+      text={
+        <>
+          <strong>Next:</strong> {nextProject.title}
+        </>
+      }
+    />
   </nav>
 );
 

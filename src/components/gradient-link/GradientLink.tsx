@@ -7,7 +7,7 @@ interface IGradientLinkProps {
   href: string;
   isRRLink?: boolean;
   newTab?: boolean;
-  text: string;
+  text: React.ReactNode;
 }
 
 const GradientLink: React.FC<IGradientLinkProps> = ({

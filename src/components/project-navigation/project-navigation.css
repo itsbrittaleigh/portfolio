@@ -6,13 +6,8 @@
 }
 
 .project-navigation__link {
-  color: var(--black);
-  transition: var(--transition);
   max-width: 48%;
-}
-
-.project-navigation__link:hover {
-  color: var(--accent);
+  transition: var(--transition);
 }
 
 .project-navigation__link--right {
