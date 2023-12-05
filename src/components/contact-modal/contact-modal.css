@@ -81,13 +81,33 @@ textarea {
 }
 
 .button {
-  background-color: var(--black);
+  background: var(--black);
+  border-radius: var(--border-radius--large);
   border: none;
   color: var(--white);
   cursor: pointer;
-  padding: 12px 24px;
-  border-radius: var(--border-radius--large);
   letter-spacing: 1px;
+  padding: 12px 24px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.button:after {
+  animation: gradientHover 2s ease-in-out infinite;
+  background: linear-gradient(to right, #8DA1B9, #EF959C, #95ADB6);
+  background-size: 200% 200%;
+  border-radius: var(--border-radius--small);
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.button:hover {
+  background: rgba(0, 0, 0, 0);
 }
 
 /* Validation */
