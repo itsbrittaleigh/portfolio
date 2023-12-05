@@ -75,7 +75,12 @@ const Project = () => {
               if (!!acknowledgement.website) {
                 return (
                   <li>
-                    <a href={website} rel="noreferrer" target="_blank">{name}</a>
+                    <GradientLink
+                      className="project__link"
+                      href={website!}
+                      newTab
+                      text={name}
+                    />
                     &nbsp;—&nbsp;
                     {role}
                   </li>
