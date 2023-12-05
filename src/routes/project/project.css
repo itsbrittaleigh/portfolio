@@ -10,3 +10,7 @@
   padding: 8px 0;
   margin-bottom: 8px;
 }
+
+.project__link {
+  color: var(--accent);
+}
