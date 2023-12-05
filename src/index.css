@@ -25,11 +25,11 @@
   --normal: 400;
 
   /* Colors */
-  --black: #121212;
-  --gray: #B7B7B7;
-  --white: #FFFFFF;
-  --error: #8D021F;
-  --accent: #5DA271;
+  --black: rgba(18, 18, 18, 1);
+  --gray: rgba(183, 183, 183, 1);
+  --white: rgba(255, 255, 255, 1);
+  --error: rgba(141, 2, 31, 1);
+  --accent: rgba(82, 72, 156, 1);
 
   /* Shapes */
   --border-radius--large: 5px;
@@ -98,23 +98,7 @@ li {
 
 a {
   color: var(--accent);
-  position: relative;
   text-decoration: none;
-}
-
-a:after {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 0;
-  background-color: var(--accent);
-  bottom: 1px;
-  left: 0;
-  transition: var(--transition);
-}
-
-a:hover:after {
-  width: 100%;
 }
 
 .wrapper {

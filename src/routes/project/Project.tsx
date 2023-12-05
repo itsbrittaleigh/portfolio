@@ -5,6 +5,7 @@ import NotFound from './NotFound';
 import './project.css';
 import ProjectNavigation from '../../components/project-navigation/ProjectNavigation';
 import ScrollToTop from '../../components/scroll-to-top/ScrollToTop';
+import GradientLink from '../../components/gradient-link/GradientLink';
 
 const Project = () => {
   const params = useParams();
@@ -30,23 +31,20 @@ const Project = () => {
       <section className="section">
         <p>{currentProject.overview}</p>
         <div className="project__link-container">
-          <a
+          <GradientLink
             className="project__link"
             href={currentProject.liveLink}
-            rel="noreferrer"
-            target="_blank"
-          >
-            View site &rarr;
-          </a>
+            newTab
+            text="View site"
+          />
         </div>
         <div className="project__link-container">
-          <a
+          <GradientLink
+            className="project__link"
             href={currentProject.githubLink}
-            rel="noreferrer"
-            target="_blank"
-          >
-            View code &rarr;
-          </a>
+            newTab
+            text="View code"
+          />
         </div>
       </section>
 
@@ -77,7 +75,12 @@ const Project = () => {
               if (!!acknowledgement.website) {
                 return (
                   <li>
-                    <a href={website} rel="noreferrer" target="_blank">{name}</a>
+                    <GradientLink
+                      className="project__link"
+                      href={website!}
+                      newTab
+                      text={name}
+                    />
                     &nbsp;—&nbsp;
                     {role}
                   </li>
