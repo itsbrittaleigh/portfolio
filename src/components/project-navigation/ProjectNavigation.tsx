@@ -1,6 +1,5 @@
 import React from 'react';
 import { IProject } from '../../routes/projects/projectData';
-import { Link } from 'react-router-dom';
 import './project-navigation.css';
 import GradientLink from '../gradient-link/GradientLink';
 
