@@ -8,6 +8,7 @@ interface IGradientLinkProps {
   isRRLink?: boolean;
   newTab?: boolean;
   text: React.ReactNode;
+  tabIndex?: number;
 }
 
 const GradientLink: React.FC<IGradientLinkProps> = ({
@@ -15,6 +16,7 @@ const GradientLink: React.FC<IGradientLinkProps> = ({
   isRRLink = false,
   href,
   newTab = false,
+  tabIndex = 0,
   text,
 }) => (
   <>
@@ -25,6 +27,7 @@ const GradientLink: React.FC<IGradientLinkProps> = ({
         className={`gradient-link ${className}`}
         href={href}
         rel={newTab ? 'noreferrer' : ''}
+        tabIndex={tabIndex}
         target={newTab ? '_blank' : '_self'}
       >
         {text}
