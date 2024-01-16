@@ -99,7 +99,7 @@ const About = () => {
           I’m excited about the potential for meaningful collaborations and am always open to connecting
           with like-minded professionals. If you’re looking for a frontend engineer who combines
           technical proficiency with a passion for creating exceptional user experiences, or you’re
-          looking for a friend to upgrade your Barefoot palette, let’s connect and explore the
+          looking for a friend to upgrade your Barefoot palate, let’s connect and explore the
           possibilities together.
         </p>
         <p>
