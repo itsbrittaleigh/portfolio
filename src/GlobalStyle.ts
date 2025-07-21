@@ -1,0 +1,108 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    src: url("/fonts/Literata-Regular.ttf") format("truetype");
+    font-family: "Literata";
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    src: url("/fonts/Literata-Italic.ttf") format("truetype");
+    font-family: "Literata";
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    src: url("/fonts/Literata-Bold.ttf") format("truetype");
+    font-family: "Literata";
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    src: url("/fonts/W95FA.otf") format("opentype");
+    font-family: "MS Sans Serif";
+    font-weight: 400;
+  }
+
+  :root {
+    /* Not needed, use theme instead */
+  }
+
+  *, *:after, *:before {
+    box-sizing: border-box;
+  }
+
+  body, html {
+    background-color: ${({ theme }) => theme.backgroundPrimary};
+    color: ${({ theme }) => theme.textPrimary};
+    font-family: ${({ theme }) => theme.fontFamily};
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 1.15;
+    margin: 0 0 16px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 16px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 32px 0 16px;
+  }
+
+  p, li, a {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  p {
+    margin: 0 0 16px;
+  }
+
+  li {
+    margin: 0 0 8px;
+  }
+
+  a {
+    color: ${({ theme }) => theme.textAccent};
+    text-decoration: none;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    padding: 144px 48px 0 0;
+    width: calc(100% - 48px);
+  }
+
+  .content {
+    padding-bottom: 64px;
+    max-width: 795px;
+  }
+
+  .section {
+    margin-bottom: 64px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .content {
+      padding-bottom: 144px;
+    }
+    .wrapper {
+      max-width: 1200px;
+      width: calc(100vw - 96px);
+    }
+  }
+`;

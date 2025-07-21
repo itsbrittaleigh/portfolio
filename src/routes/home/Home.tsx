@@ -1,13 +1,13 @@
 import React from 'react';
-import './home.css';
+import { Hero, Headline } from './Home.styled';
 
 const Home = () => (
-  <section className="hero">
-    <h1 className="headline">
+  <Hero>
+    <Headline>
       Britta Leigh Rodenbeck
       <span>User experience developer</span>
-    </h1>
-  </section>
+    </Headline>
+  </Hero>
 );
 
 export default Home;

@@ -1,27 +1,27 @@
 import React from 'react';
-import './projects.css';
 import { clientProjects, sideProjects } from './projectData';
 import Project from '../../components/project/Project';
+import { Content, Section, ProjectsSection } from './Projects.styled';
 
 const Projects = () => {
   return (
-    <div className="content">
-      <section className="section">
+    <Content>
+      <Section>
         <h1>✏️ Some cool things I've worked on</h1>
-      </section>
-      <section className="projects__section">
+      </Section>
+      <ProjectsSection>
         <h2>👩🏼‍💼 Client Projects</h2>
         {clientProjects.map((project) => (
-          <Project project={project} />
+          <Project key={project.slug} project={project} />
         ))}
-      </section>
-      <section className="projects__section">
+      </ProjectsSection>
+      <ProjectsSection>
         <h2>💃🏼 Fun projects</h2>
         {sideProjects.map((project) => (
-          <Project project={project} />
+          <Project key={project.slug} project={project} />
         ))}
-      </section>
-    </div>
+      </ProjectsSection>
+    </Content>
   );
 };
 

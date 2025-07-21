@@ -1,10 +1,14 @@
 import React from 'react';
-import './about.css';
+import {
+  Content,
+  Section,
+  SkillList
+} from './About.styled';
 
 const About = () => {
   return (
-    <div className="content">
-      <section className="section">
+    <Content>
+      <Section>
         <h1><span aria-hidden>👋🏼</span> Hello, there!</h1>
         <p>
           I’m Britta Rodenbeck, a frontend engineer with a passion for crafting exceptional user experiences.
@@ -32,8 +36,8 @@ const About = () => {
           expertise but also a collaborative spirit, valuing open dialogue and the exchange of  ideas that
           lead to innovative solutions.
         </p>
-      </section>
-      <section className="section">
+      </Section>
+      <Section>
         <h2><span aria-hidden>📚</span> Beyond the code</h2>
         <p>
           Away from the keyboard, you’ll find me hiking, biking, and camping in the warmer months and
@@ -42,15 +46,15 @@ const About = () => {
           I love exploring my new home city of Milwaukee, trying new bars and restaurants and finding
           which has the best cheese platter and curds.
         </p>
-      </section>
-      <section className="section">
+      </Section>
+      <Section>
         <h2><span aria-hidden>💻</span> Technical skills</h2>
         <p>
           Every engineer has their strengths and weaknesses. Below are the languages, frameworks, programs,
           etc. that I both excel with and—more importantly—love to work with.
         </p>
         <h3>JavaScript</h3>
-        <ul className="skill-list skill-list--two-column">
+        <SkillList $twoColumn>
           <li>JavaScript (ES6/ES7+)</li>
           <li>TypeScript</li>
           <li>React (Redux, Context API, React hooks)</li>
@@ -59,9 +63,9 @@ const About = () => {
           <li>Next.js</li>
           <li>Gatsby</li>
           <li>Web components</li>
-        </ul>
+        </SkillList>
         <h3>CSS</h3>
-        <ul className="skill-list skill-list--two-column">
+        <SkillList $twoColumn>
           <li>CSS3</li>
           <li>Sass</li>
           <li>CSS / SVG animations</li>
@@ -70,30 +74,30 @@ const About = () => {
           <li>Material UI</li>
           <li>Bootstrap</li>
           <li>Tailwind CSS</li>
-        </ul>
+        </SkillList>
         <h3>Testing</h3>
-        <ul className="skill-list">
+        <SkillList>
           <li>React Testing Library</li>
           <li>Jest</li>
           <li>Cypress</li>
-        </ul>
+        </SkillList>
         <h3>Design</h3>
-        <ul className="skill-list">
+        <SkillList>
           <li>Responsive design</li>
           <li>Figma</li>
           <li>Sketch</li>
-        </ul>
+        </SkillList>
         <h3>Platforms</h3>
-        <ul className="skill-list skill-list--two-column">
+        <SkillList $twoColumn>
           <li>Shopify (platform + Liquid)</li>
           <li>Salesforce</li>
           <li>GitHub</li>
           <li>Netlify</li>
           <li>Nx</li>
           <li>NPM / Yarn</li>
-        </ul>
-      </section>
-      <section className="section">
+        </SkillList>
+      </Section>
+      <Section>
         <h2><span aria-hidden>👯</span> Let's connect</h2>
         <p>
           I’m excited about the potential for meaningful collaborations and am always open to connecting
@@ -105,8 +109,8 @@ const About = () => {
         <p>
           <span aria-hidden>👋🏼</span> Thank you for stopping by!
         </p>
-      </section>
-    </div>
+      </Section>
+    </Content>
   );
 };
 

@@ -2,10 +2,16 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { clientProjects, sideProjects } from '../projects/projectData';
 import NotFound from './NotFound';
-import './project.css';
 import ProjectNavigation from '../../components/project-navigation/ProjectNavigation';
 import ScrollToTop from '../../components/scroll-to-top/ScrollToTop';
 import GradientLink from '../../components/gradient-link/GradientLink';
+import {
+  Content,
+  Section,
+  ProjectHeader,
+  ProjectHeadline,
+  ProjectLinkContainer
+} from './Project.styled';
 
 const Project = () => {
   const params = useParams();
@@ -22,61 +28,58 @@ const Project = () => {
   if (!currentProject) return <NotFound />;
 
   return (
-    <div className="content">
-      <header className="project__header">
-        <h1 className="project__headline">{currentProject.title}</h1>
+    <Content>
+      <ProjectHeader>
+        <ProjectHeadline>{currentProject.title}</ProjectHeadline>
         <p><i>{isClientProject ? 'Client project' : 'Fun project'}</i></p>
-      </header>
+      </ProjectHeader>
 
-      <section className="section">
+      <Section>
         <p>{currentProject.overview}</p>
-        <div className="project__link-container">
+        <ProjectLinkContainer>
           <GradientLink
-            className="project__link"
             href={currentProject.liveLink}
             newTab
-            text="View site"
+            text="View site →"
           />
-        </div>
-        <div className="project__link-container">
+        </ProjectLinkContainer>
+        <ProjectLinkContainer>
           <GradientLink
-            className="project__link"
             href={currentProject.githubLink}
             newTab
-            text="View code"
+            text="View code →"
           />
-        </div>
-      </section>
+        </ProjectLinkContainer>
+      </Section>
 
       {!!currentProject.role && (
-        <section className="section">
+        <Section>
           <h2><span aria-hidden>🙋🏼‍♀️</span> My Role</h2>
           <p>{currentProject.role}</p>
-        </section>
+        </Section>
       )}
 
       {currentProject.technologies.length > 0 && (
-        <section className="section">
+        <Section>
           <h2><span aria-hidden>🧪</span> Technologies Used</h2>
           <ul>
             {currentProject.technologies.map((technology, idx) => (
               <li key={idx}>{technology}</li>
             ))}
           </ul>
-        </section>
+        </Section>
       )}
 
       {currentProject.acknowledgements.length > 0 && (
-        <section className="section">
+        <Section>
           <h2>🤝 Acknowledgements</h2>
           <ul>
             {currentProject.acknowledgements.map((acknowledgement) => {
               const { name, website, role } = acknowledgement;
               if (!!acknowledgement.website) {
                 return (
-                  <li>
+                  <li key={name}>
                     <GradientLink
-                      className="project__link"
                       href={website!}
                       newTab
                       text={name}
@@ -87,12 +90,12 @@ const Project = () => {
                 )
               } else {
                 return (
-                  <li>{name} — {role}</li>
+                  <li key={name}>{name} — {role}</li>
                 )
               }
             })}
           </ul>
-        </section>
+        </Section>
       )}
 
       <ProjectNavigation
@@ -100,7 +103,7 @@ const Project = () => {
         previousProject={allProjects[previousProjectIndex]}
       />
       <ScrollToTop />
-    </div>
+    </Content>
   );
 };
 

@@ -1,5 +1,9 @@
 import React from 'react';
-import './burger-button.css';
+import {
+  BurgerButtonStyled,
+  BurgerLine,
+  BurgerLabel
+} from './BurgerButton.styled';
 
 interface IBurgerButtonProps {
   menuIsOpen: boolean;
@@ -7,21 +11,21 @@ interface IBurgerButtonProps {
 }
 
 const BurgerButton: React.FC<IBurgerButtonProps> = ({ menuIsOpen, setMenuIsOpen }) => {
-
   return (
-    <div className={menuIsOpen ? 'is-open' : ''}>
-      <button
-        aria-label={menuIsOpen ? 'Close menu' : 'Open menu'}
-        className="burger-button"
-        onClick={() => setMenuIsOpen(!menuIsOpen)}
-      >
-        <span aria-hidden className="burger-button__line" />
-        <span aria-hidden className="burger-button__line" />
-        <span aria-hidden className="burger-button__line" />
-        <span aria-hidden className="burger-button__line" />
-        <p className="burger-button__label">{menuIsOpen ? 'Close' : 'Menu'}</p>
-      </button>
-    </div>
+    <BurgerButtonStyled
+      aria-label={menuIsOpen ? 'Close menu' : 'Open menu'}
+      onClick={() => setMenuIsOpen(!menuIsOpen)}
+    >
+      {[0, 1, 2, 3].map((i) => (
+        <BurgerLine
+          key={i}
+          $index={i}
+          $isOpen={menuIsOpen}
+          aria-hidden
+        />
+      ))}
+      <BurgerLabel>{menuIsOpen ? 'Close' : 'Menu'}</BurgerLabel>
+    </BurgerButtonStyled>
   );
 };
 

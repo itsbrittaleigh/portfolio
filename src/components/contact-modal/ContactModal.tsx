@@ -1,5 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './contact-modal.css';
+import {
+  ModalSection,
+  ModalOverlay,
+  ModalCard,
+  ModalCloseButton,
+  ContactModalTitle,
+  ErrorsContainer,
+  ErrorItem,
+  Success,
+  StyledLabel,
+  StyledInput,
+  StyledTextarea,
+  ButtonContainer,
+  StyledButton
+} from './ContactModal.styled';
 
 interface IContactModalProps {
   isOpen: boolean;
@@ -52,16 +66,12 @@ const ContactModal: React.FC<IContactModalProps> = ({ isOpen, onClose }) => {
   }, [isOpen, onClose]);
 
   return (
-    <section
-      className={`modal ${isOpen ? 'is-active' : ''}`}
-      id="contact-modal"
-    >
-      <div className="modal__overlay" />
+    <ModalSection>
+      <ModalOverlay $isActive={isOpen} />
       {isOpen && (
-        <div className="modal__card" id="modal-card" ref={modalRef}>
-          <button
+        <ModalCard $isActive={isOpen} id="modal-card" ref={modalRef}>
+          <ModalCloseButton
             aria-label="Close contact modal"
-            className="modal__close-button"
             id="close-button"
             onClick={onClose}
           >
@@ -69,41 +79,42 @@ const ContactModal: React.FC<IContactModalProps> = ({ isOpen, onClose }) => {
               <title id="close-title">Close icon</title>
               <path d="M7 5.58599L11.95 0.635986L13.364 2.04999L8.414 6.99999L13.364 11.95L11.95 13.364L7 8.41399L2.05 13.364L0.636002 11.95L5.586 6.99999L0.636002 2.04999L2.05 0.635986L7 5.58599Z" fill="#121212"/>
             </svg>
-          </button>
-          <h2 className="contact-modal__title">Give me a shout</h2>
+          </ModalCloseButton>
+          <ContactModalTitle>Give me a shout</ContactModalTitle>
           {!!errors.length && (
-            <ul id="errors-container" className="errors__container">
+            <ErrorsContainer id="errors-container">
               {errors.map((error) => (
-                <li className="errors__error-item">{error.toString()}</li>
+                <ErrorItem key={error}>{error.toString()}</ErrorItem>
               ))}
-            </ul>
+            </ErrorsContainer>
           )}
-          {isSuccessful && (
-            <p className="success">
+          {isSuccessful ? (
+            <Success>
               Your form was submitted successfully. I'll be in contact with you shortly.
-            </p>
+            </Success>
+          ) : (
+            <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+              <input type="hidden" name="form-name" value="contact" />
+              <StyledLabel>
+                Name
+                <StyledInput type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+              </StyledLabel>
+              <StyledLabel>
+                Email address
+                <StyledInput type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              </StyledLabel>
+              <StyledLabel>
+                Message
+                <StyledTextarea name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
+              </StyledLabel>
+              <ButtonContainer>
+                <StyledButton type="submit">Send</StyledButton>
+              </ButtonContainer>
+            </form>
           )}
-          <form className={isSuccessful ? 'is-hidden' : ''} name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-            <input type="hidden" name="form-name" value="contact" />
-            <label>
-              Name
-              <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
-            </label>
-            <label>
-              Email address
-              <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            </label>
-            <label>
-              Message
-              <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-            </label>
-            <div className="button-container">
-              <button className="button" type="submit">Send</button>
-            </div>
-          </form>
-        </div>
+        </ModalCard>
       )}
-    </section>
+    </ModalSection>
   );
 
   function handleSubmit(event: any) {

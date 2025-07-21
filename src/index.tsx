@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './normalize.css';
-import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './routes/home/Home';
 import SocialLinks from './components/social-links/SocialLinks';
@@ -9,6 +8,9 @@ import Header from './components/header/Header';
 import About from './routes/about/About';
 import Projects from './routes/projects/Projects';
 import Project from './routes/project/Project';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme } from './theme';
+import { GlobalStyle } from './GlobalStyle';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -35,11 +37,14 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
-    <div className="wrapper">
-      <Header />
-      <RouterProvider router={router} />
-      <SocialLinks />
-    </div>
+    <ThemeProvider theme={lightTheme}>
+      <GlobalStyle />
+      <div className="wrapper">
+        <Header />
+        <RouterProvider router={router} />
+        <SocialLinks />
+      </div>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

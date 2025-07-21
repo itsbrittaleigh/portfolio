@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './gradient-link.css';
+import { StyledGradientLink } from './GradientLink.styled';
 
 interface IGradientLinkProps {
-  className?: string;
   href: string;
   isRRLink?: boolean;
   newTab?: boolean;
@@ -12,28 +11,27 @@ interface IGradientLinkProps {
 }
 
 const GradientLink: React.FC<IGradientLinkProps> = ({
-  className = '',
   isRRLink = false,
   href,
   newTab = false,
   tabIndex = 0,
   text,
-}) => (
-  <>
-    {isRRLink ? (
-      <Link className={`gradient-link ${className}`} to={href}>{text}</Link>
-     ) : (
-      <a
-        className={`gradient-link ${className}`}
-        href={href}
-        rel={newTab ? 'noreferrer' : ''}
-        tabIndex={tabIndex}
-        target={newTab ? '_blank' : '_self'}
-      >
-        {text}
-      </a>
-     )}
-  </>
-);
+  ...rest
+}) =>
+  isRRLink ? (
+    <StyledGradientLink as={Link} to={href} tabIndex={tabIndex} {...rest}>
+      {text}
+    </StyledGradientLink>
+  ) : (
+    <StyledGradientLink
+      href={href}
+      rel={newTab ? 'noreferrer' : ''}
+      tabIndex={tabIndex}
+      target={newTab ? '_blank' : '_self'}
+      {...rest}
+    >
+      {text}
+    </StyledGradientLink>
+  );
 
 export default GradientLink;
