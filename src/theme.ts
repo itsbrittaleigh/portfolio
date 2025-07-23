@@ -41,4 +41,8 @@ export const lightTheme = {
 export const darkTheme = {
   ...baseTheme,
   mode: "dark",
+  textPrimary: "rgba(255, 255, 255, 1)",
+  backgroundPrimary: "rgba(18, 18, 18, 1)",
+  backgroundSecondary: "rgba(255, 255, 255, 1)",
+  inputBorder: "rgba(255, 255, 255, 1)",
 };

@@ -5,12 +5,15 @@ import {
   NavigationMenuLink
 } from './NavigationMenu.styled';
 import GradientLink from '../gradient-link/GradientLink';
+import { useTheme } from '../../ThemeContext';
 
 interface INavigationMenuProps {
   isOpen: boolean;
 }
 
 const NavigationMenu: React.FC<INavigationMenuProps> = ({ isOpen }) => {
+  const { toggleTheme, themeMode } = useTheme();
+
   return (
     <NavigationMenuWrapper $isOpen={isOpen}>
       <NavigationMenuList>
@@ -39,6 +42,16 @@ const NavigationMenu: React.FC<INavigationMenuProps> = ({ isOpen }) => {
               newTab
               tabIndex={isOpen ? 0 : -1}
               text="Resume"
+            />
+          </NavigationMenuLink>
+        </li>
+        <li>
+          <NavigationMenuLink>
+            <GradientLink
+              onClick={toggleTheme}
+              tabIndex={isOpen ? 0 : -1}
+              text={themeMode === 'light' ? '🌜 Dark mode' : '☀️ Light mode'}
+              asButton
             />
           </NavigationMenuLink>
         </li>

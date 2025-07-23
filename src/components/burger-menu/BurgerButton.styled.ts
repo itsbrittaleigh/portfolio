@@ -80,4 +80,5 @@ export const BurgerLabel = styled.p`
   text-align: center;
   position: relative;
   z-index: 2;
+  color: ${({ theme }) => theme.textPrimary};
 `;

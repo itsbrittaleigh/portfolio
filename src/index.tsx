@@ -8,8 +8,7 @@ import Header from './components/header/Header';
 import About from './routes/about/About';
 import Projects from './routes/projects/Projects';
 import Project from './routes/project/Project';
-import { ThemeProvider } from 'styled-components';
-import { lightTheme } from './theme';
+import { ThemeProvider } from './ThemeContext';
 import { GlobalStyle } from './GlobalStyle';
 
 const root = ReactDOM.createRoot(
@@ -37,7 +36,7 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider>
       <GlobalStyle />
       <div className="wrapper">
         <Header />

@@ -21,6 +21,10 @@ export const StyledGradientLink = styled.a`
   color: ${({ theme }) => theme.textPrimary};
   transition: color ${({ theme }) => theme.transition};
   text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  overflow: visible;
 
   &:hover {
     color: rgba(0, 0, 0, 0);
