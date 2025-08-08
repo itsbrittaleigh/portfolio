@@ -12,9 +12,9 @@ const About = () => {
         <h1><span aria-hidden>👋🏼</span> Hello, there!</h1>
         <p>
           I’m Britta Rodenbeck, a frontend engineer with a passion for crafting exceptional user experiences.
-          With eight years in the dynamic world of web and software development, I’ve had the privilege of
-          working with startups and small companies, contributing to innovative projects that marry form
-          with function.
+          With nine years in the dynamic world of web and software development, I’ve had the privilege of
+          working with startups, small companies, and enterprises contributing to innovative projects that
+          marry form with function.
         </p>
         <p>
           My journey in frontend engineering started with a curiosity about the intersection of design,
@@ -33,7 +33,7 @@ const About = () => {
         <p>
           Having collaborated with diverse and distributed teams, I understand the importance of effective
           communication and teamwork in the design and development process. I bring not only technical
-          expertise but also a collaborative spirit, valuing open dialogue and the exchange of  ideas that
+          expertise but also a collaborative spirit, valuing open dialogue and the exchange of ideas that
           lead to innovative solutions.
         </p>
       </Section>
@@ -42,9 +42,9 @@ const About = () => {
         <p>
           Away from the keyboard, you’ll find me hiking, biking, and camping in the warmer months and
           snuggling with my cat, a good library book, and hot chocolate in the colder ones. I am studying
-          to become a certified sommelier, with my WSET 1 in hand and my WSET 2 scheduled for July 2024.
-          I love exploring my new home city of Milwaukee, trying new bars and restaurants and finding
-          which has the best cheese platter and curds.
+          to become a certified sommelier, with my WSET 2 in hand. I love exploring my new home city of
+          Milwaukee, trying new bars and restaurants and finding which has the best cheese platter and
+          curds.
         </p>
       </Section>
       <Section>
